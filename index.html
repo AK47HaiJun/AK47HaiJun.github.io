@@ -262,125 +262,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/Ajax-1/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.DaXin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/header.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mr.Zhang Xin">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/11/Ajax-1/" itemprop="url">Ajax</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-11T23:26:35+08:00">
-                2018-11-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/Ajax/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -451,119 +332,15 @@
 
       
         
-          
-            <p>我的第一篇博客文，最近学Ajax，断断续续学了两周，其实一周就可以搞定的，中间有很多琐事，一直拖到现在才完成。才学习Ajax过程中遇到很多坑，到现在还没有解决，解析JSON数据，我已经知道了大概解析JSON数据的流程。准备把这两周学习的知识做个总结吧！</p>
+          <p>我的第一篇博客文，最近学Ajax，断断续续学了两周，其实一周就可以搞定的，中间有很多琐事，一直拖到现在才完成。才学习Ajax过程中遇到很多坑，到现在还没有解决，解析JSON数据，我已经知道了大概解析JSON数据的流程。准备把这两周学习的知识做个总结吧！</p>
 <hr>
-<h2 id="Ajax大纲"><a href="#Ajax大纲" class="headerlink" title="Ajax大纲"></a>Ajax大纲</h2><h3 id="Ajax简单介绍"><a href="#Ajax简单介绍" class="headerlink" title="Ajax简单介绍"></a>Ajax简单介绍</h3><pre><code>1. Ajax：AsynchronousJavascriptAndXml(异步JavaScirpt和XML)
-2. Ajax主要作用：实现页面的局部刷新和异步刷新
-3. Ajax主要应用： s 表单验证和页面请求数据
-</code></pre><h3 id="Ajax-Get-Post-请求-如何创建"><a href="#Ajax-Get-Post-请求-如何创建" class="headerlink" title="Ajax Get Post 请求 如何创建"></a>Ajax Get Post 请求 如何创建</h3><pre><code>Ajax请求方式
-1.    GET请求
-2.    POST请求
-</code></pre><h4 id="GET请求创建"><a href="#GET请求创建" class="headerlink" title="GET请求创建"></a>GET请求创建</h4><blockquote>
-<p>var xhr = new XMLHttpRequest();<br>  xhr.open(‘get’,”脚本文件”);<br>  xhr.send(null);<br>  xhr.onload=function(){<br>  console.log(xhr.responseText)<br>  }</p>
-</blockquote>
-<p>GET数据的获取是通过在脚本文件？后面拼数据</p>
-<hr>
-<h4 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h4><blockquote>
-<p>  var xhr = new XMLHttpRequest();<br>  xhr.open(‘get’,”脚本文件?参数=”+value);<br>  xhr.send(null)<br>  xhr.onreadystatechange=function(){<br>  if(xhr.readyState == 4 &amp;&amp; xhr.status == 200){<br>   var result = xhr.responseText;<br>   console.log(reslut)}<br>   }</p>
-</blockquote>
-<h3 id="Ajax-如何请求解析json数据-和-xml数据"><a href="#Ajax-如何请求解析json数据-和-xml数据" class="headerlink" title="Ajax 如何请求解析json数据 和 xml数据"></a>Ajax 如何请求解析json数据 和 xml数据</h3><pre><code>1. **解析json数据**                    
-  将JSON数据字符串转化为对象
-  然后通过遍历 获取具体数据， 对象[属性]
-2. **解析XML数据** 
-  Ajax4个步骤张 请求数据格式是 **xhr.responseXML**
-  然后通过标签选择器遍历
-</code></pre><h3 id="jQuery-Ajax使用"><a href="#jQuery-Ajax使用" class="headerlink" title="jQuery Ajax使用"></a>jQuery Ajax使用</h3><p>jQuery Ajax已经自己封装好了Ajax，可以直接方便的使用。使用格式 $.ajax()</p>
-<p>代码撸上</p>
-<pre><code>$.ajax({
-url:请求地址,
-type:请求类型  get/post,
-data:{
-    请求参数名：请求参数值
-},
-async:请求方式  true 异步请求，false同步请求，
-dataType：请求数据类型 &quot;text&quot;/&quot;JSON&quot;/&quot;xml&quot;,
-success:function(result){
-    获取请求到得数据逻辑
-}
-})
-</code></pre><h3 id="jQuery-Ajax-解析JSON数据和XML数据"><a href="#jQuery-Ajax-解析JSON数据和XML数据" class="headerlink" title="jQuery Ajax 解析JSON数据和XML数据"></a>jQuery Ajax 解析JSON数据和XML数据</h3><font color="#FF0000">jQuer Ajax 请求JSON数据和XML数据和Ajax请求方式是一样的</font>
-
-<h3 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h3><p><strong>什么是模板引擎呢？</strong></p>
-<pre><code>它是快速生成HTML，并渲染到页面上。
-</code></pre><p><strong>如何使用模板引擎呢？</strong></p>
-<pre><code>1. 首先需要导入一个template.js文件
-2.  在生成一个
-       &lt;script type=&quot;text/html&quot;  id=&quot;模板引擎id&quot;&gt;
-            HTML片段
-    &lt;/script&gt;
-3. 在另一个
-    &lt;script&gt;
-        var html =template(&apos;&quot;模板ID&quot;，”传递模板数据“)
-    &lt;/script&gt;
-</code></pre><p><strong>这个模板数据是对象或者请求的数据</strong></p>
-<hr>
-<p><strong>为何要使用它呢</strong></p>
-<pre><code>它提供了后期维护方便快捷
-</code></pre><h3 id="跨域的了解和同源策略"><a href="#跨域的了解和同源策略" class="headerlink" title="跨域的了解和同源策略"></a>跨域的了解和同源策略</h3><p><strong>什么是跨域</strong></p>
-<pre><code>通俗易懂的说就是访问别人的数据库。它就是服务器返回一个方法调用，这个方法是我们事先定义的，而方法中参数就是我们要的数据。
-</code></pre><p><strong>同源策略</strong></p>
-<pre><code>为什么要说它？
-它是浏览器为保证安全实施的安全机制。Ajax默认是可以获取到同源的数据，非同源的数据获取不到。
-
-什么是同源和非同源呢？
-协议   域名     端口     这三个都相同，那么它就是同源策略。---------那么它就可以直接使用Ajax4个步骤访问数据了
-</code></pre><font color="#FF0000">非同源就得使用跨域访问数据了</font>
-
-<p><strong>如何使用跨域呢？</strong></p>
-<pre><code>跨域的使用:
-jQuary 跨域的使用
-    $.ajax({
-        url: 接口文档，
-        data:{
-            业务逻辑参数
-        }
-        jsonp:指定回调函数  接口文档会有
-        dataType:&apos;jsonp&apos;    请求类型为  jsonp才能获取到跨域内容
-        success:function(data){
-            var html  = template(&apos;引擎模板id&apos;,data)
-            指定地方.html（html）      ------------添加数据
-        }
-
-    })
-</code></pre><p><strong><font color="#FF0000">跨域分为两种情况</font></strong></p>
-<pre><code>1. 一种请求数据是jsonp
-2. 另一种请求数据是json
-</code></pre><hr>
-<h3 id="获取数据三种方法"><a href="#获取数据三种方法" class="headerlink" title="获取数据三种方法"></a>获取数据三种方法</h3><ol>
-<li>通过Ajax 4个步骤————-访问的是自己的数据库</li>
-<li>通过跨域，动态创建script，如果返回的数据类型是jsonp————那么就可以访问的是第三方数据库</li>
-<li>通过跨域，动态创建script，如果返回的数据类型不是jsonp———-那么需要在自己的后端语言读取url，并返回，然后在通过Ajax4个步骤访问数据即可</li>
-</ol>
-<h2 id="只有在同源的情况下，才可以用Ajax方法问，如果是非同源情况，那么只能用跨域访问"><a href="#只有在同源的情况下，才可以用Ajax方法问，如果是非同源情况，那么只能用跨域访问" class="headerlink" title=" 只有在同源的情况下，才可以用Ajax方法问，如果是非同源情况，那么只能用跨域访问"></a> 只有在同源的情况下，才可以用Ajax方法问，如果是非同源情况，那么只能用跨域访问</h2><hr>
-<font color="#FF0000">以上就是Ajax的总结解析吧，如果博文中哪处有错或者不懂，可以私信我QQ：1325190062</font>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/11/Ajax/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -773,7 +550,7 @@ jQuary 跨域的使用
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

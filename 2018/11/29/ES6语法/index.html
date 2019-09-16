@@ -1,100 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>ES6语法 | Hexo</title><meta name="description" content="ES6语法"><meta name="keywords" content="ES6语法"><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="http://yoursite.com/2018/11/29/ES6语法/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ES6语法"><meta name="twitter:description" content="ES6语法"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png"><meta property="og:type" content="article"><meta property="og:title" content="ES6语法"><meta property="og:url" content="http://yoursite.com/2018/11/29/ES6语法/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="ES6语法"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="2018年总结" href="http://yoursite.com/2019/01/20/2018年总结/"><link rel="next" title="Vue学习笔记" href="http://yoursite.com/2018/11/25/Vue/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'false',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Bookmark',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days'
 
   
-  <title>ES6语法 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于最近学习Vue，它的语法规范大部分使用的ES6的语法，所以来补充补充ES6知识吧，另外现在很多流行的框架都是基于ES6语法开发的，可知ES6的语法重要性。">
-<meta name="keywords" content="ES6语法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ES6语法">
-<meta property="og:url" content="http://yoursite.com/2018/11/29/ES6语法/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="由于最近学习Vue，它的语法规范大部分使用的ES6的语法，所以来补充补充ES6知识吧，另外现在很多流行的框架都是基于ES6语法开发的，可知ES6的语法重要性。">
-<meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/es6.jpg">
-<meta property="og:image" content="http://yoursite.com/images/ES66.jpg">
-<meta property="og:image" content="http://yoursite.com/images/map.png">
-<meta property="og:image" content="http://yoursite.com/images/p.gif">
-<meta property="og:updated_time" content="2018-11-29T13:35:18.348Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6语法">
-<meta name="twitter:description" content="由于最近学习Vue，它的语法规范大部分使用的ES6的语法，所以来补充补充ES6知识吧，另外现在很多流行的框架都是基于ES6语法开发的，可知ES6的语法重要性。">
-<meta name="twitter:image" content="http://yoursite.com/images/es6.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-ES6语法" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/29/ES6语法/" class="article-date">
-  <time datetime="2018-11-29T13:10:28.000Z" itemprop="datePublished">2018-11-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      ES6语法
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>由于最近学习Vue，它的语法规范大部分使用的ES6的语法，所以来补充补充ES6知识吧，另外现在很多流行的框架都是基于ES6语法开发的，可知ES6的语法重要性。</p>
-<p><img src="/images/es6.jpg" alt="sss"><br><a id="more"></a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/ES66.jpg" alt="sss"></h2><h2 id="变量（let）与常量定义（const）"><a href="#变量（let）与常量定义（const）" class="headerlink" title="变量（let）与常量定义（const）"></a>变量（let）与常量定义（const）</h2><h3 id="let的定义和使用"><a href="#let的定义和使用" class="headerlink" title="let的定义和使用"></a>let的定义和使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b =<span class="number">3</span>;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//b =3 //ReferenceError: b is not defined   暂时性死区</span></span><br><span class="line">    <span class="keyword">let</span> b;</span><br><span class="line">    b=<span class="number">4</span></span><br><span class="line">    <span class="built_in">console</span>.log(b)    <span class="comment">// 它的结果是4, </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(b)  <span class="comment">// 它的结果是3</span></span><br></pre></td></tr></table></figure>
+}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量（let）与常量定义（const）"><span class="toc-number">2.</span> <span class="toc-text">变量（let）与常量定义（const）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#let的定义和使用"><span class="toc-number">2.1.</span> <span class="toc-text">let的定义和使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#let不允许重复声明"><span class="toc-number">2.2.</span> <span class="toc-text">let不允许重复声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#const定义和使用"><span class="toc-number">2.3.</span> <span class="toc-text">const定义和使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量和对象解构赋值"><span class="toc-number">3.</span> <span class="toc-text">变量和对象解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解构分类："><span class="toc-number">3.1.</span> <span class="toc-text">解构分类：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进制的转化"><span class="toc-number">4.</span> <span class="toc-text">进制的转化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串模板"><span class="toc-number">5.</span> <span class="toc-text">字符串模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展运算符（…）"><span class="toc-number">6.</span> <span class="toc-text">扩展运算符（…）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#箭头函数"><span class="toc-number">7.</span> <span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Symbol"><span class="toc-number">8.</span> <span class="toc-text">Symbol</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for-of和for-in的区别"><span class="toc-number">9.</span> <span class="toc-text">for-of和for-in的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类定义"><span class="toc-number">10.</span> <span class="toc-text">类定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#setter和getter"><span class="toc-number">11.</span> <span class="toc-text">setter和getter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类继承"><span class="toc-number">12.</span> <span class="toc-text">类继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set与Map"><span class="toc-number">13.</span> <span class="toc-text">Set与Map</span></a></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/post.png)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">Hexo</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><div class="menu_mask"></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item text-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item text-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">8</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"><div class="posttitle">ES6语法</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2018-11-29<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> Updated 2018-11-29</time></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><p>由于最近学习Vue，它的语法规范大部分使用的ES6的语法，所以来补充补充ES6知识吧，另外现在很多流行的框架都是基于ES6语法开发的，可知ES6的语法重要性。</p>
+<p><img alt="sss" data-src="/images/es6.jpg" class="lozad"><br><a id="more"></a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img alt="sss" data-src="/images/ES66.jpg" class="lozad"></h2><h2 id="变量（let）与常量定义（const）"><a href="#变量（let）与常量定义（const）" class="headerlink" title="变量（let）与常量定义（const）"></a>变量（let）与常量定义（const）</h2><h3 id="let的定义和使用"><a href="#let的定义和使用" class="headerlink" title="let的定义和使用"></a>let的定义和使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b =<span class="number">3</span>;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//b =3 //ReferenceError: b is not defined   暂时性死区</span></span><br><span class="line">    <span class="keyword">let</span> b;</span><br><span class="line">    b=<span class="number">4</span></span><br><span class="line">    <span class="built_in">console</span>.log(b)    <span class="comment">// 它的结果是4, </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(b)  <span class="comment">// 它的结果是3</span></span><br></pre></td></tr></table></figure>
 <p><font color="red">什么是暂时性死区？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在一个块级作用域中，使用let/const声明变量时，只要变量还没有声明完成前就使用，就会报错，这就时暂时性死区。</span><br></pre></td></tr></table></figure></font></p>
 <p><font color="red">暂时性死区的作用？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">它主要是为了减少运行时错误，防止在声明变量未完成之前使用。</span><br></pre></td></tr></table></figure></font></p>
 <h3 id="let不允许重复声明"><a href="#let不允许重复声明" class="headerlink" title="let不允许重复声明"></a>let不允许重复声明</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">check</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> a =<span class="number">0</span></span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">check() <span class="comment">// 报错</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//let不允许在相同作用域内，重复声明同一个变量。</span></span><br></pre></td></tr></table></figure>
@@ -107,7 +34,7 @@
 </code></pre><p> <font color="red">什么是解构赋值？<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</span><br></pre></td></tr></table></figure></font></p>
  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 字符串解构-----------字符串会被转换成一个类型数组的对象，每个对象都有length属性</span></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">length</span>:len&#125; = <span class="string">'sayHello'</span></span><br><span class="line"><span class="built_in">console</span>.log(len)<span class="comment">// 会输出sayHello的长度   8</span></span><br><span class="line"><span class="comment">// 数组赋值</span></span><br><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="built_in">console</span>.log(a,b,c)     <span class="comment">// 1 2 3 </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"------------另一种用法--------------"</span>)</span><br><span class="line"><span class="keyword">let</span> [d,e,...other] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="built_in">console</span>.log(d,e,other)<span class="comment">// other是1，2后面的数，他们组成一个新的数组     1 2  [ 3,4 5 6]</span></span><br><span class="line"><span class="comment">//对象赋值----------常用于函数传参</span></span><br><span class="line"><span class="keyword">let</span> &#123;name,age&#125; = &#123;<span class="attr">name</span>:<span class="string">"张三"</span>,<span class="attr">age</span>:<span class="number">20</span>&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name,age)  <span class="comment">//张三 20</span></span><br><span class="line"><span class="comment">// 函数赋值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">check</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">100</span>,<span class="number">200</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> [A,B]  = check();</span><br><span class="line"><span class="built_in">console</span>.log(A,B)  <span class="comment">// 100 200</span></span><br><span class="line"><span class="comment">//函数参数名指定</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">&#123;x=<span class="number">1</span>,y=<span class="number">2</span>&#125;</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x-y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(fun(&#123;&#125;))<span class="comment">//-1   函数不传参数时，它会指定默认值进行计算</span></span><br><span class="line"><span class="built_in">console</span>.log(fun(&#123;<span class="attr">x</span>:<span class="number">22</span>&#125;))<span class="comment">//20   解构函数传参不限制传参个数</span></span><br><span class="line"><span class="built_in">console</span>.log(fun(&#123;<span class="attr">x</span>:<span class="number">22</span>,<span class="attr">y</span>:<span class="number">88</span>&#125;))<span class="comment">//-66</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [ x = <span class="number">1</span>,bn=<span class="number">4</span>] = [<span class="literal">undefined</span>,<span class="number">888</span>]    <span class="comment">//默认值生效：只要将等会右边对应的设置为undefinded,就会生效</span></span><br><span class="line"><span class="built_in">console</span>.log(x+<span class="string">"-------"</span>+bn)  <span class="comment">// 1 888</span></span><br></pre></td></tr></table></figure>
 <p>  <font color="red">解构赋值用途？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 交换变量的值</span><br><span class="line">2. 交换变量的值(将它们放在数组或对象里返回)</span><br><span class="line">3. 函数参数的定义</span><br><span class="line">4. 提取 JSON 数据</span><br><span class="line">5. 函数参数的默认值</span><br><span class="line">6. 遍历 Map 结构</span><br></pre></td></tr></table></figure></font></p>
-<p><img src="/images/map.png" alt="sss"></p>
+<p><img alt="sss" data-src="/images/map.png" class="lozad"></p>
 <h2 id="进制的转化"><a href="#进制的转化" class="headerlink" title="进制的转化"></a>进制的转化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0b---------二进制</span><br><span class="line">0o---------十进制</span><br><span class="line">0x----------十六进制</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'10的二进制'</span>+<span class="number">0b10</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'10的十进制'</span>+<span class="number">0o10</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'10的十六进制'</span>+<span class="number">0x10</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">8</span>))<span class="comment">// 将num转换成8进制</span></span><br><span class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">14</span>))<span class="comment">// 将num转换成14进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 变量数值.toString(数字)-----------数字是指定多少进制的</span></span><br></pre></td></tr></table></figure>
@@ -200,144 +127,10 @@ clear()：清除所有成员，没有返回值
 <p><a href="https://blog.csdn.net/Crazy_SunShine/article/details/80624366" target="_blank" rel="noopener">JSON转Map   Map转JSON</a></p>
 <p><a href="http://www.php.cn/js-tutorial-406783.html" target="_blank" rel="noopener">JS模块化</a></p>
 <hr>
-<p><img src="/images/p.gif" alt="sss"></p>
+<p><img alt="sss" data-src="/images/p.gif" class="lozad"></p>
 <p>以上是关于ES6的知识点，可能不全，但是最常用的，平常遇到不会的知识点，可以去<a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">阮一峰 网站去看ES6，特别不错，讲的特别细</a>。<br>接下来，补充一下JS高级知识，开始Vue，做项目👈</p>
 <p>前端爱好者可以加我一起探讨，QQ1325190062</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2018/11/29/ES6语法/">http://yoursite.com/2018/11/29/ES6语法/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ES6语法/">ES6语法    </a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-buttom"><i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/wechat.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/alipay.jpg"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2019/01/20/2018年总结/"><img class="prev_cover lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>2018年总结</span></div></a></div><div class="next-post pull-right"><a href="/2018/11/25/Vue/"><img class="next_cover lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>Vue学习笔记</span></div></a></div></nav></div></div><footer><div id="footer"><div class="copyright">&copy;2018 - 2019 By John Doe</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><a id="to_comment" href="#post-comment"><i class="scroll_to_comment fa fa-comments"></i></a><i class="fa fa-book" id="readmode" title="Read Mode"> </i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion">繁</a><i class="nightshift fa fa-moon-o" id="nightshift" title="Dark Mode"></i></section><div class=" " id="post_bottom"><div id="post_bottom_items"><a id="mobile_to_comment" href="#post-comment"><i class="mobile_scroll_to_comment fa fa-comments"></i></a><i class="fa fa-list" id="mobile_toc"></i><div id="toc_mobile"><div class="toc_mobile_headline">Catalog</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text"></span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#变量（let）与常量定义（const）"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">变量（let）与常量定义（const）</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#let的定义和使用"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">let的定义和使用</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#let不允许重复声明"><span class="toc_mobile_items-number">2.2.</span> <span class="toc_mobile_items-text">let不允许重复声明</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#const定义和使用"><span class="toc_mobile_items-number">2.3.</span> <span class="toc_mobile_items-text">const定义和使用</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#变量和对象解构赋值"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">变量和对象解构赋值</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#解构分类："><span class="toc_mobile_items-number">3.1.</span> <span class="toc_mobile_items-text">解构分类：</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#进制的转化"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text">进制的转化</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#字符串模板"><span class="toc_mobile_items-number">5.</span> <span class="toc_mobile_items-text">字符串模板</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#扩展运算符（…）"><span class="toc_mobile_items-number">6.</span> <span class="toc_mobile_items-text">扩展运算符（…）</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#箭头函数"><span class="toc_mobile_items-number">7.</span> <span class="toc_mobile_items-text">箭头函数</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Symbol"><span class="toc_mobile_items-number">8.</span> <span class="toc_mobile_items-text">Symbol</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#for-of和for-in的区别"><span class="toc_mobile_items-number">9.</span> <span class="toc_mobile_items-text">for-of和for-in的区别</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#类定义"><span class="toc_mobile_items-number">10.</span> <span class="toc_mobile_items-text">类定义</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#setter和getter"><span class="toc_mobile_items-number">11.</span> <span class="toc_mobile_items-text">setter和getter</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#类继承"><span class="toc_mobile_items-number">12.</span> <span class="toc_mobile_items-text">类继承</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Set与Map"><span class="toc_mobile_items-number">13.</span> <span class="toc_mobile_items-text">Set与Map</span></a></li></ol></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/nightshift.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/29/ES6语法/" data-id="ck0mi15lx0007v8vgvzj5c2vh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6语法/">ES6语法</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/01/20/2018年总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          2018年总结
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/11/25/Vue/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Vue学习笔记</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2018总结/">2018总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dart/">Dart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6语法/">ES6语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git使用/">Git使用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVVM/">MVVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue基础/">Vue基础</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/2018总结/" style="font-size: 10px;">2018总结</a> <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Dart/" style="font-size: 10px;">Dart</a> <a href="/tags/ES6语法/" style="font-size: 10px;">ES6语法</a> <a href="/tags/Git使用/" style="font-size: 10px;">Git使用</a> <a href="/tags/MVVM/" style="font-size: 10px;">MVVM</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Vue基础/" style="font-size: 10px;">Vue基础</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/06/30/Github/">Git学习笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/26/Dart/">Dart and Flutter学习之旅</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/12/Node总结/">寒假Node.js+Mongodb学习总结</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/20/2018年总结/">2018年总结</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/29/ES6语法/">ES6语法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
-</body>
-</html>
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();</script></body></html>
